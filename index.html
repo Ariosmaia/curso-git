@@ -3,5 +3,44 @@
     </head>
     <body>
         <h1>Testando Git Primeira vez</h1>
+        
+        
+        <p>ssh-keygen -t rsa -C "seu_email@provedor.com"</p>
+        
+        <p>git clone https://github.com/jcfonsecagit/repositorio.git</p>
+        
+        <p>git tag -- Ver versões</p>
+        
+        <p>git checkout v0.1 -- Como esta na primeira versão</p>
+        
+        <p>git diff v0.1 v0.2 -- Mudanças entre versões</p>
+        
+        
+        
+        <p>git init -- Como indicar que essa pasta será o nosso futuro repositório? Isso é feito a partir do seguinte comando </p>
+        
+      
+        
+        <p>git ls-files -- Já temos o nosso primeiro arquivo em nosso projeto. Mas, será que o git já sabe que o arquivo criado pertence ao repositório? Para tal, podemos verificar quais os arquivos que pertencem ao nosso repositório. Isso pode ser feito digitando o comando: </p>
+        
+        <p>git status -- E aí? Retornou algo? Nada? Onde está o nosso arquivo? Como fazemos para adiciona-lo no repositório? Para confirmar, podemos verificar o estado dos arquivos do nosso projeto </p>
+        
+        <p>git add nomeDoArquivo -- Com isso, podemos verificar que o nosso arquivo está na condição de Untracked files, isto é, ele não está na lista de arquivos cujas alterações serão rastreadas, ou controladas. Isso acontece porque o Git não sabe que deve controlar as alterações deste arquivo, ou seja, que ele deva fazer o track. Então, como dizemos ao Git que ele deve realizar o track? Isso é feito a partir do comando git add passando o nome do arquivo do qual o Git deve fazer o track. No nosso caso, queremos adicionar o arquivo index.html ao repositório.-- Depois ele muda para Changes to be commited</p>
+        
+        <p>git blame index.html -- O Git nos fornece uma funcionalidade onde podemos consultar quem foi o autor de cada linha de um arquivo através do comando</p>
+        
+        <p>Configurar o responsavel pela linha de código -- git config user.name "João Carlos Fonseca"
+git config user.email "jcfonsecagit@gmail.com"</p>
+        
+        <p>git config --global user.name "João Carlos Fonseca"
+git config --global user.email "jcfonsecagit@gmail.com" -- Porém, se quisermos fazer isso para outros repositórios, temos que dar o mesmo comando toda vez? Felizmente, o Git nos fornece a opção de definir um nome de usuário e e-mail para todo o sistema, isto é, deixando esta configuração global</p>
+        
+        <p>git commit -m "Início do projeto" -- A flag "-m", indica que o conteúdo a seguir é a mensagem que será utilizada para descrever o que está sendo feito no commit. Verificando os estados dos arquivos do nosso sistema com o comando git status, verificamos que não há nenhuma alteração em nosso projeto.</p>
+        
+        
+        
+        
+        
+        
     </body>
 </html>

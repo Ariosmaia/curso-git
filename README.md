@@ -456,6 +456,14 @@ Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
 #### E finalmente: sincronizamos com o repositório remoto:
 	$ git push origin master
 
+## Aviso Git: LF will be replaced by CRLF
+#### Esta mensagem só está te avisando que fez a conversão para você.
+#### Você pode mudar este comportamento com:
+
+	git config core.autocrlf true
+## mas o mais comum é deixar como
+
+	git config core.autocrlf input
 	
  	
 

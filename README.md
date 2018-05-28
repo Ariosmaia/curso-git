@@ -446,6 +446,17 @@ Se o commit estiver com o problema, então ele deverá ser marcado como **ruim**
 Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
 	
 	git bisect reset
+##### Removendo um arquivo remoto
+###Primeiramente, vamos nos certificar de que o repositório local está sincronizado com o repositório remoto (aqui estamos nos baseando de que o branch atual seja o master):
+	$ git pull origin master
+###Vamos então remover a pasta e/ou os arquivos:
+	$ git rm -r Arquivo Pasta
+###Em seguida fazemos o commit da modificação:
+	$ git commit -m "Remove Arquivo e Pasta"
+###E finalmente: sincronizamos com o repositório remoto:
+	$ git push origin master
+
+	
  	
 
 

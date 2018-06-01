@@ -80,6 +80,25 @@ git config --global user.email "jcfonsecagit@gmail.com" -- Porém, se quisermos 
         
         <h3>Se tiver o conflito na mesma linha, o git dará o erro de conflito, vai aparecer as duas alteracões e o dev tem que escolher qual manter.</h3>
         
+        <p>git checkout -b desenvolvimneto -- Cria e já entra na branch</p>
+        <p>Sempre fazer o o git pull nas master para atualizar o conteudo</p>
+        
+        <p>git rebase master desenvolvimento -- Atualiza a branch desenvolvimento com os dados da master-- Se estiver dentro da brach desenvolvimento só git rebase master</p>
+        
+        <p>git merge desenvolvimento -- Atualiza a master com os dados da brach desenvolvimento --- Depois só enviar o push</p>
+        
+        <h2>Mas o rebsae pode falhar</h2>
+        
+        <p>Caso dois usuario, um muda o arquivo na mesma linha e de o push. Antes de tudo o outro faz o pull</p>
+        <P>Depois ele tenta fazer o rebase em desenvolvimento, porém tera conflitos na mesma linha.</P>
+        <p>Opções a serem tomadas: git rebase --abort (voltar ao ponto antes da rebase)</p>
+        <p>Opções a serem tomadas: git rebase --skip (descartar seu commit atual)</p>
+        <p>Opções a serem tomadas: Entrar no arquivo e corrigir o erro manualmente, dar um git add . e depois um "git rebase --continue"</p>
+        <p>O git era corrigir erro commit por commit</p>
+        
+        <p> Por fim, atualizar o master com "git merge desenvolvimneto" e git push</p>
+        
+        
         
         
         

@@ -60,7 +60,6 @@ git config --global user.email "jcfonsecagit@gmail.com" -- Porém, se quisermos 
         <p>git whatchanged --- Ver os commites com mais detalhes</p>
         <p>Ao executarmos o comando git whatchanged -p é possível visualizar quais as linhas que foram modificadas em cada commit do nosso projeto. Obs: também é possível utilizarmos git log -p, que imprime também os commits nos quais não houve modificação.</p>
         
-        <h1> branch</h1>
         <p>git branch design -- Cria um branch novo</p>
         <p>git branch -- consulta os branch's, paasando a opçãp -a as remotas são inclusas</p>
         <p>git checkout design ou mater -- Mudar de branch, com -b muda e cria pra nova brach</p>
@@ -81,32 +80,38 @@ git config --global user.email "jcfonsecagit@gmail.com" -- Porém, se quisermos 
         
         <h3>Se tiver o conflito na mesma linha, o git dará o erro de conflito, vai aparecer as duas alteracões e o dev tem que escolher qual manter.</h3>
         
-        <p>git checkout -b desenvolvimneto -- Cria e já entra na branch</p>
-        <p>Sempre fazer o o git pull nas master para atualizar o conteudo</p>
         
-        <p>git rebase master desenvolvimento -- Atualiza a branch desenvolvimento com os dados da master-- Se estiver dentro da brach desenvolvimento só git rebase master</p>
+        <h1>Desafazendo erros</h1>
+        <p>Quando fiz uma alteração e quero voltar: git checkout index.html</p>
+        <p>Quando fizer a altereção + git add: git reset HEAD index.html</p>
+        <p>Caso esteja fazendo varias alterações e descubra um erro de outro commit, como salvar meus dados para resolver o erro e depois continuar, uso o: git stash</p>
+        <p>Como retornar a tarefa: git stash pop</p>
+        <p>Se existe algum salvo no stash: git stash list -- para usar: git stash pop stash</p>
         
-        <p>git merge desenvolvimento -- Atualiza a master com os dados da brach desenvolvimento --- Depois só enviar o push</p>
+        <h4>descantado commits indejados</h4>
+        <p>Usamos o commit log e pegamos o HASH do "ultimo" commit: git reset jfdskfds7f8fjsklfjdskl8789fdsk</p>
         
-        <h2>Mas o rebsae pode falhar</h2>
+        <h4>Desfazendo commits antigos</h4>
+        <p>O ruim do reset q ele descartados todos os commits anteriores</p>
+        <p>Então para ser mais especifico uso: git revert -n hash do commit</p>
         
-        <p>Caso dois usuario, um muda o arquivo na mesma linha e de o push. Antes de tudo o outro faz o pull</p>
-        <P>Depois ele tenta fazer o rebase em desenvolvimento, porém tera conflitos na mesma linha.</P>
-        <p>Opções a serem tomadas: git rebase --abort (voltar ao ponto antes da rebase)</p>
-        <p>Opções a serem tomadas: git rebase --skip (descartar seu commit atual)</p>
-        <p>Opções a serem tomadas: Entrar no arquivo e corrigir o erro manualmente, dar um git add . e depois um "git rebase --continue"</p>
-        <p>O git era corrigir erro commit por commit</p>
+        <h4>Buscando bug em muitos commits</h4>
+        <p>Por exemplo a app para de funcionar, sabemos quando ele estava funcionando mais ou menos, vamos dar uma olhada: git checkout hash do commit</p>
+        <p>Estava funcinando ok: git checkout HEAD .... Veremos quanto commits temos entre ele e o commit que estava funcionando</p>
+        <p>Para testar os commits: git bisect start</p>
+        <p>Vamos marcar o HEAD como ruim: git bisect bad HEAD</p>
+        <p>Marcar o commit com estado bom: git bisect good hash do commit bom</p>
         
-        <p> Por fim, atualizar o master com "git merge desenvolvimneto" e git push</p>
+        <p>O git irá fazer uma busca entre esse dois ponto: Se estive bom: git bisect bad - Se estiver bom: git bisect good</p>
+        <p>ELe segue esse ciclo de bad e good até o arquivo com problema</p>
         
-        
-        
-        
-        
-        
-        
-        
+        <p>QUando encontrar podemos: git reset, git revert, ou git show pra ver as modificações</p>
         
         
+        
+        
+        
+        
+            
     </body>
 </html>
